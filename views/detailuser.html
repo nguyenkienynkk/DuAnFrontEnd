@@ -1,0 +1,24 @@
+<div>
+    <h4 class="mx-5 mt-5">Thông tin chi tiết của khách hàng {{user.ten}}</h4>
+    <table class="table mx-5 mt-5">
+        <thead>
+           <th>Tên</th>
+           <th>Email</th>
+           <th>Số điện thoại</th>
+           <th>Ghi chú</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{user.ten}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.sodienthoai}}</td>
+                <td>{{user.ghichu}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <h6 class="mx-5 text-center"><strong>Tên của khách hàng: {{user.ten}}</strong></h6>
+    <h6 class="mx-5 text-center"><strong>Email của khách hàng: {{user.email}}</strong></h6>
+    <h6 class="mx-5 text-center"><strong>Số điện thoại của khách hàng: {{user.sodienthoai}}</strong></h6>
+    <h6 class="mx-5 text-center"><strong>Ghi chú của khách hàng: {{user.ghichu}}</strong></h6>
+            <a class="d-flex justify-content-center text-decoration-none" href="#!/list-user"><button class="btn btn-warning">Trở về</button></a>
+</div>

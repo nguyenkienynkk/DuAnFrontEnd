@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Traveloka</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Include Toastr CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" /> -->
+    <link rel="stylesheet" href="./lh.html" />
+    <link rel="stylesheet" href="./index.js" />
+    <script src="./libs/angular.min.js"></script>
+    <script src="./libs/angular-route.js"></script>
+    <script src="./lh.js"></script>
+    <script src="/AngularMovies/controller/AddUserController.js"></script>
+    <script src="/AngularMovies/controller/DetailUserController.js"></script>
+    <script src="/AngularMovies/controller/EditUserController.js"></script>
+    <script src="/AngularMovies/controller/ListUserController.js"></script>
+    <!-- Nếu sử dụng CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+  </head>
+  <body ng-app="appDemo">
+    <div id="toast-container" class="toast-top-right"></div>
+    <div class="container-fluid p-0">
+      <div class="background-image">
+        <div class="container content">
+          <nav class="navbar navbar-light">
+            <div class="container-fluid">
+              <img src="./image/traveloka.svg" class="traveloka" alt="" />
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                  <div
+                    class="textcolor collapse navbar-collapse"
+                    id="navbarNavDropdown"
+                  >
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                        <a
+                          class="nav-link dropdown-toggle"
+                          href="#"
+                          id="navbarDropdownMenuLink"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <strong
+                            ><img src="./image/vietnam.svg" alt="" /> VI |
+                            VND</strong
+                          >
+                        </a>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="navbarDropdownMenuLink"
+                        >
+                          <li>
+                            <a class="dropdown-item text-black" href="#">WON</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-black" href="#">USD</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-black" href="#"
+                              >DOLLAR</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"
+                          ><strong>Khuyến mãi</strong></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./lh.html"
+                          ><strong>Liên hệ</strong></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"
+                          ><strong>Hợp tác với chúng tôi</strong>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./datve.html"
+                          ><strong>Đặt lịch</strong></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"
+                          ><strong>Đặt chỗ cho tôi</strong></a
+                        >
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a
+                          class="nav-link dropdown-toggle"
+                          href="#"
+                          id="navbarDropdownMenuLink"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <strong>Nguyễn</strong>
+                        </a>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="navbarDropdownMenuLink"
+                        >
+                          <li>
+                            <a class="dropdown-item text-black" href="#"
+                              ><strong>Nguyễn Khắc Kiên</strong></a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-black" href="#"
+                              ><img
+                                class="mx-2"
+                                src="./image/coin.svg"
+                                alt="" /><strong>0 Điểm</strong
+                              ><i class="fa-solid fa-chevron-right mx-1"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item text-black fw-medium my-2"
+                              href="#"
+                              ><i
+                                class="fa-solid fa-circle-user fa-lg mx-2"
+                                style="color: #0194f3"
+                              ></i
+                              >Chỉnh sửa hồ sơ</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item text-black fw-medium my-2"
+                              href="#"
+                              ><i
+                                class="fa-solid fa-id-card fa-lg mx-2"
+                                style="color: #0194f3"
+                              ></i
+                              >Thẻ của tôi</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item text-black fw-medium my-2"
+                              href="#"
+                              ><i
+                                class="fa-solid fa-money-bill fa-lg mx-2"
+                                style="color: #0194f3"
+                              ></i
+                              >Danh sách giao dịch</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item text-black fw-medium my-2"
+                              href="#"
+                              ><i
+                                class="fa-solid fa-receipt fa-lg mx-2"
+                                style="color: #0194f3"
+                              ></i
+                              >Đặt chỗ của tôi</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item text-black fw-medium my-2"
+                              href="#"
+                              ><i
+                                class="fa-solid fa-bell fa-lg mx-2"
+                                style="color: #0194f3"
+                              ></i
+                              >Thông báo giá vé máy bay</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item text-black fw-medium my-2"
+                              href="#"
+                              ><i
+                                class="fa-solid fa-users-gear fa-lg mx-2"
+                                style="color: #0194f3"
+                              ></i
+                              >Passenger Quick Pick</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item text-black fw-medium my-2"
+                              href="#"
+                              ><i
+                                class="fa-solid fa-cube fa-lg mx-2"
+                                style="color: #0194f3"
+                              ></i
+                              >Khuyến mãi</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item text-black fw-medium my-2"
+                              href="#"
+                              ><i
+                                class="fa-solid fa-power-off fa-lg mx-2"
+                                style="color: #0194f3"
+                              ></i
+                              >Đăng xuất</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </nav>
+          <hr style="color: white" class="m-0" />
+          <nav class="nav2 navbar navbar-light">
+            <div class="container-fluid p-0 m-0">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                  <div
+                    class="textcolor collapse navbar-collapse"
+                    id="navbarNavDropdown"
+                  >
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"
+                          ><strong>Khách sạn</strong></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"
+                          ><strong>Vé máy bay</strong></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"
+                          ><strong>Vé xe khách</strong></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"
+                          ><strong>Đưa đón sân bay</strong>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"
+                          ><strong>Cho thuê xe</strong></a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"
+                          ><strong>Hoạt động & Vui chơi</strong></a
+                        >
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a
+                          class="nav-link dropdown-toggle"
+                          href="#"
+                          id="navbarDropdownMenuLink"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <strong>More</strong>
+                        </a>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="navbarDropdownMenuLink"
+                        >
+                          <li>
+                            <a class="dropdown-item text-black" href="#"
+                              >Action</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-black" href="#"
+                              >Another action</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-black" href="#"
+                              >Something else here</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </nav>
+          <hr style="color: white" class="m-0" />
+        </div>
+        <p class="text-center">
+          <strong>Từ Đông Nam Á Đến Thế Giới Trong Tầm Tay Bạn</strong>
+        </p>
+        <!-- HTML -->
+
+
+        <ul
+          class="nav mx-5 nav-pills nav-fill gap-2 p-1 small rounded-5 shadow-sm justify-content-center"
+          id="pillNav2"
+          role="tablist"
+          style="
+            --bs-nav-link-color: var(--bs-white);
+            --bs-nav-pills-link-active-color: var(--bs-black);
+            --bs-nav-pills-link-active-bg: var(--bs-white);
+          "
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active rounded-5 custom-home"
+              id="home-tab2"
+              data-bs-toggle="tab"
+              href="#khachSan"
+              role="tab"
+            >
+              <strong class="fs-6"
+                ><i class="fa-solid fa-hotel mx-2"></i>Khách sạn</strong
+              >
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link rounded-5 custom-home"
+              id="profile-tab2"
+              data-bs-toggle="tab"
+              href="#veMayBay"
+              role="tab"
+              aria-selected="false"
+            >
+              <strong class="fs-6"
+                ><i class="fa-solid fa-plane-departure mx-2"></i>Vé máy
+                bay</strong
+              >
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link rounded-5 custom-home"
+              id="contact-tab2"
+              data-bs-toggle="tab"
+              href="#veXeKhach"
+              role="tab"
+              aria-selected="false"
+            >
+              <strong class="fs-6"
+                ><i class="fa-solid fa-bus mx-2"></i>Vé xe khách</strong
+              >
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link rounded-5 custom-home"
+              id="contact-tab2"
+              data-bs-toggle="tab"
+              href="#duaDonSanBay"
+              role="tab"
+              aria-selected="false"
+            >
+              <strong class="fs-6"
+                ><i class="fa-solid fa-car-on mx-2"></i>Đưa đón sân bay</strong
+              >
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link rounded-5 custom-home"
+              id="contact-tab2"
+              data-bs-toggle="tab"
+              href="#choThueXe"
+              role="tab"
+              aria-selected="false"
+            >
+              <strong class="fs-6"
+                ><i class="fa-solid fa-taxi mx-2"></i>Cho thuê xe</strong
+              >
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link rounded-5 custom-home"
+              id="contact-tab2"
+              data-bs-toggle="tab"
+              href="#hoatDongVuiChoi"
+              role="tab"
+              aria-selected="false"
+            >
+              <strong class="fs-6"
+                ><i class="fa-solid fa-hands-holding-child mx-2"></i>Hoạt động
+                vui chơi</strong
+              >
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link rounded-5 custom-home"
+              id="contact-tab2"
+              data-bs-toggle="tab"
+              href="#khac"
+              role="tab"
+              aria-selected="false"
+            >
+              <strong class="fs-6"
+                ><i class="fa-solid fa-layer-group mx-2"></i>Khác</strong
+              >
+            </button>
+          </li>
+        </ul>
+        <hr style="color: white" class="my-3" />
+
+        <!-- Tab content -->
+        <div class="tab-content mt-3">
+          <!-- Home Content -->
+          <div class="tab-pane fade show active" id="khachSan">
+            <div class="row">
+              <label class="text-white my-2 phan5 d-flex d-flex col-sm-3"
+                >Thành phố, địa điểm hoặc tên khách sạn:</label
+              >
+              <label class="text-white my-2 phan51 d-flex col-sm-3"
+                >Ngày nhận phòng và trả phòng</label
+              >
+              <label class="text-white my-2 phan52 d-flex col-sm-3"
+                >Khách và Phòng</label
+              >
+            </div>
+            <div class="row justify-content-center">
+              <div class="form-group col-sm-3 p-0">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    style="height: 45px"
+                    id="dropdownInput"
+                    placeholder="Thành phố, khách sạn, điểm đến,..."
+                  />
+                  <ul
+                    class="dropdown-menu my-0 position-absolute top-45"
+                    id="dropdownMenu"
+                    style="width: 100%; overflow-y: auto"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><span>Điểm đến phổ biến</span></a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6"><strong>Đà Nẵng</strong></div>
+                          <div class="col-sm-6 text-end vung">
+                            <span>Vùng</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6 fw-normal fs-6">Việt Nam</div>
+                          <div class="col-sm-6 text-end vung">
+                            <span>1.688 khách sạn</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6"><strong>Đà Lạt</strong></div>
+                          <div class="col-sm-6 text-end vung">
+                            <span>Thành phố</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6 fw-normal fs-6">
+                            Tỉnh Lâm Đồng, Việt Nam
+                          </div>
+                          <div class="col-sm-6 text-end vung">
+                            <span>1.607 khách sạn</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6"><strong>Bangkok</strong></div>
+                          <div class="col-sm-6 text-end vung">
+                            <span>Vùng</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6 fw-normal fs-6">Thái Lan</div>
+                          <div class="col-sm-6 text-end vung">
+                            <span>1.999 khách sạn</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <!-- badisd -->
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <strong>Thượng Hải</strong>
+                          </div>
+                          <div class="col-sm-6 text-end vung">
+                            <span>Vùng</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6 fw-normal fs-6">Trung Quốc</div>
+                          <div class="col-sm-6 text-end vung">
+                            <span>6.503 khách sạn</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <!-- dsfsd -->
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6"><strong>Seoul</strong></div>
+                          <div class="col-sm-6 text-end vung">
+                            <span>Vùng</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6 fw-normal fs-6">Hàn Quốc</div>
+                          <div class="col-sm-6 text-end vung">
+                            <span>1.342 khách sạn</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <!-- dfsdfsd -->
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6"><strong>Tokyo</strong></div>
+                          <div class="col-sm-6 text-end vung">
+                            <span>Vùng</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6 fw-normal fs-6">Nhật Bản</div>
+                          <div class="col-sm-6 text-end vung">
+                            <span>1.245 khách sạn</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <!-- csdjas -->
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <strong>Sân bay quốc tế Bacolod-Silay(BCD)</strong>
+                          </div>
+                          <div class="col-sm-6 text-end vung">
+                            <span>Sân bay</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row">
+                          <div class="col-sm-6 fw-normal fs-6">
+                            Silay,Bacolod,Negros Occidental
+                          </div>
+                          <div class="col-sm-6 text-end vung"></div>
+                        </div>
+                      </a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-group col-sm-3 p-0">
+                <div class="input-group-1">
+                  <input
+                    type="date"
+                    class="form-control input-no-border-radius"
+                    style="height: 45px"
+                    id="dI"
+                    value="10 thg 1 2024 - 11 thg 1 2024"
+                  />
+                </div>
+              </div>
+              <div class="form-group col-sm-3 p-0">
+                <div class="input-group-2">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control input-no-border-radius"
+                      style="height: 45px"
+                      id="dI1"
+                      value="1 người lớn, 0 Trẻ em, 1 phòng"
+                    />
+                    <span class="input-group-text bg-info text-white">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                  </div>
+                  <ul
+                    class="dropdown-menu my-0 position-static"
+                    id="dM1"
+                    style="width: 100%; max-height: 220px; overflow-y: auto"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="row my-2">
+                          <!-- Cột cho chữ "Người lớn" -->
+                          <div class="col-sm-6">
+                            <strong
+                              ><img src="./image/nguoilon.svg" alt="" />Người
+                              lớn</strong
+                            >
+                          </div>
+                          <div class="col-sm-6 mx-4" style="width: 130px">
+                            <div class="input-group">
+                              <button
+                                class="btn btn-outline-info"
+                                type="button"
+                              >
+                                <strong class="fw-bold">-</strong>
+                              </button>
+                              <input
+                                type="text"
+                                class="form-control text-center col-1"
+                                value="1"
+                              />
+                              <button
+                                class="btn btn-outline-info"
+                                type="button"
+                              >
+                                <strong class="fw-bold">+</strong>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row my-2">
+                          <!-- Cột cho chữ "Người lớn" -->
+                          <div class="col-sm-6">
+                            <strong
+                              ><img src="./image/treem.svg" alt="" />Trẻ
+                              em</strong
+                            >
+                          </div>
+                          <div class="col-sm-6 mx-4" style="width: 130px">
+                            <div class="input-group">
+                              <button
+                                class="btn btn-outline-info"
+                                type="button"
+                              >
+                                <strong class="fw-bold">-</strong>
+                              </button>
+                              <input
+                                type="text"
+                                class="form-control text-center col-1"
+                                value="1"
+                              />
+                              <button
+                                class="btn btn-outline-info"
+                                type="button"
+                              >
+                                <strong class="fw-bold">+</strong>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row my-2">
+                          <!-- Cột cho chữ "Người lớn" -->
+                          <div class="col-sm-6">
+                            <strong
+                              ><img
+                                src="./image/room.svg"
+                                alt=""
+                              />Phòng</strong
+                            >
+                          </div>
+                          <div class="col-sm-6 mx-4" style="width: 130px">
+                            <div class="input-group">
+                              <button
+                                class="btn btn-outline-info"
+                                type="button"
+                              >
+                                <strong class="fw-bold">-</strong>
+                              </button>
+                              <input
+                                type="text"
+                                class="form-control text-center col-1"
+                                value="1"
+                              />
+                              <button
+                                class="btn btn-outline-info"
+                                type="button"
+                              >
+                                <strong class="fw-bold">+</strong>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <button
+                        class="mx-3 my-1 bg-info px-3 py-1 border border-0 text-white"
+                        style="border-radius: 5px"
+                      >
+                        <strong>Xong</strong>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Content -->
+          <div class="tab-pane fade" id="veMayBay">
+            <!-- Profile content goes here -->
+            <div class="phan21">
+              <div class="row">
+                <div
+                  class="col-sm-6 d-flex justify-content-center align-items-center"
+                >
+                  <!-- Nội dung cột 1 (nếu cần) -->
+                </div>
+                <div class="col-sm-6 d-flex justify-content-around">
+                  <select
+                    id="mySelect"
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected data-display="1">
+                      1 Người lớn, 0 Trẻ em, 0 Em bé
+                    </option>
+                    <option value="1">Người lớn</option>
+                    <option value="2">Trẻ em</option>
+                    <option value="3">Em bé</option>
+                  </select>
+
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Phổ thông</option>
+                    <option value="1">Phổ thông đặc biệt</option>
+                    <option value="2">Thương gia</option>
+                    <option value="3">Hạng nhất</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="veXeKhach">
+            <!-- Profile content goes here -->
+            3
+          </div>
+          <div class="tab-pane fade" id="duaDonSanBay">
+            4
+            <!-- Profile content goes here -->
+          </div>
+          <div class="tab-pane fade" id="choThueXe">
+            5
+            <!-- Profile content goes here -->
+          </div>
+
+          <div class="tab-pane fade" id="hoatDongVuiChoi">
+            6
+            <!-- Profile content goes here -->
+          </div>
+
+          <!-- Contact Content -->
+          <div class="tab-pane fade" id="khac">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter your contact information"
+            />
+          </div>
+        </div>
+        <div id="trustedByContainer">
+          <div id="trustedBy" class="text-white mx-2 fst-italic">
+            Trusted by
+          </div>
+          <div id="imageContainer">
+            <img id="trustedImage" src="" alt="Image" />
+          </div>
+        </div>
+      </div>
+      <div class="four-icon my-5 d-flex justify-content-between box-container">
+        <div class="Easy box-demo">
+          <i class="fa-brands fa-first-order-alt fa-3x fa-spin maginitem"></i>
+          <h3>Easy Booking</h3>
+          <p class="text-center">
+            You can easily manage many update processes, such as date change,
+            room and bed preference setting, or guest information change.
+          </p>
+        </div>
+        <div class="Last box-demo">
+          <i class="fa-solid fa-earth-americas fa-3x fa-spin maginitem"></i>
+
+          <h3>Last Minute Deals</h3>
+          <p class="text-center">
+            Looking for a hotel for tonight? You can stay at the best price by
+            following our last minute discounts instead of getting lost among
+            hundreds of options.
+          </p>
+        </div>
+        <div class="Ba box-demo">
+          <i class="fa-regular fa-compass fa-3x fa-spin maginitem"></i>
+          <h3 class="mx-3">24/7 Support</h3>
+          <p class="text-center">
+            By using our Call Center and online support channels, you can ask
+            us 24/7 questions and get service on any subject you want.
+          </p>
+        </div>
+        <div class="Early box-demo">
+          <i class="fa-solid fa-hourglass-half fa-3x fa-spin maginitem"></i>
+          <h3>Early Reservation</h3>
+          <p class="text-center">
+            You can benefit from great discounts by booking early for 365 days
+            of the year! Just follow our announcements and page.
+          </p>
+        </div>
+      </div>
+      <div ng-view></div>
+      <div class="d-flex align-items-center justify-content-center w-100">
+        <img src="./image/salehet.webp" class="mt-5 w-image" alt="" />
+      </div>
+      <div class="d-flex align-items-center justify-content-center w-100">
+        <img src="./image/uudaitoansan.webp" class="mt-5 w-image" alt="" />
+      </div>
+      <div class="thetong4">
+        <div
+          class="row magiamgia d-flex justify-content-center align-items-center"
+        >
+          <div
+            class="d-flex align-items-center justify-content-center col-sm-3"
+          >
+            <img src="./image/magiamgia41.webp" alt="" />
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-center col-sm-3"
+          >
+            <img src="./image/magiamgia42.webp" alt="" />
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-center col-sm-3"
+          >
+            <img src="./image/magiamgia43.webp" alt="" />
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-center col-sm-3"
+          >
+            <img src="./image/magiamgia44.webp" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-center w-100">
+        <img src="./image/thuonghet.webp" class="mt-5 w-image" alt="" />
+      </div>
+      <div class="baymuonnoi">
+        <div class="mbay">
+          <div class="bay fs-3 mt-5 mx-4" style="color: #0194f3">
+            <span><strong>Bay muôn nơi</strong></span>
+          </div>
+          <p class="mx-4 mt-2 fs-6">
+            <strong>Dùng mã ưu đãi để được giảm giá đến 500K</strong>
+          </p>
+          <ul
+            class="nav nav-pills gap-2 p-1 small rounded-5 shadow-sm"
+            id="pillNav3"
+            role="tablist"
+            style="
+              --bs-nav-link-color: var(--bs-blue);
+              --bs-nav-pills-link-active-color: var(--bs-white);
+              --bs-nav-pills-link-active-bg: var(--bs-blue);
+              font-weight: 600;
+            "
+          >
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link active rounded-5"
+                id="home-tab2"
+                data-bs-toggle="pill"
+                href="#baytet"
+                role="tab"
+                aria-selected="true"
+                >Bay tết</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link rounded-5"
+                id="profile-tab2"
+                data-bs-toggle="pill"
+                href="#baynoidia"
+                role="tab"
+                aria-selected="false"
+                >Bay nội địa</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link rounded-5"
+                id="contact-tab2"
+                data-bs-toggle="pill"
+                href="#bayquocte"
+                role="tab"
+                aria-selected="false"
+                >Bay quốc tế</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="tieude">SPECIAL OFFERS</div>
+        <div class="d-flex justify-content-between box-container">
+          <div class="img1">
+            <div class="hover-image">
+              <img id="slider" src="./image/imghotel/img1.jpg" alt="" />
+              <div class="Pre">
+                <i
+                  class="fa-solid fa-circle-chevron-left fa-lg"
+                  onclick="Prev()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="Next">
+                <i
+                  class="fa-solid fa-circle-chevron-right fa-lg"
+                  onclick="Next()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="name">11% Deal</div>
+            </div>
+            <p class="title"><a href="">DEDEMAN HOTEL ISTANBUL</a></p>
+            <div class="box1">
+              <span><a href=""> Istanbul / Besiktas</a></span>
+              <br />
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="box2">
+              <del>$90</del>
+              <p>$80</p>
+            </div>
+          </div>
+          <div class="img2">
+            <div class="hover-image">
+              <img id="slider2" src="./image/imghotel/img2.jpg" alt="" />
+              <div class="Pre">
+                <i
+                  class="fa-solid fa-circle-chevron-left fa-lg"
+                  onclick="Prev2()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="Next">
+                <i
+                  class="fa-solid fa-circle-chevron-right fa-lg"
+                  onclick="Next2()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="name">14% Deal</div>
+            </div>
+
+            <p class="title"><a href="">TAXIM EXPRESS HOTEL</a></p>
+            <div class="box1">
+              <span> <a href="">Istanbul / Sisli</a> </span>
+              <br />
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="box2">
+              <del>$86</del>
+              <p>$79</p>
+            </div>
+          </div>
+          <div class="img3">
+            <div class="hover-image">
+              <img id="slider3" src="./image/imghotel/img3.jpg" alt="" />
+              <div class="Pre">
+                <i
+                  class="fa-solid fa-circle-chevron-left fa-lg"
+                  onclick="Prev3()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="Next">
+                <i
+                  class="fa-solid fa-circle-chevron-right fa-lg"
+                  onclick="Next3()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="name">23% Deal</div>
+            </div>
+            <p class="title"><a href="">NOVA PLAZA PARK HOTEL</a></p>
+            <div class="box1">
+              <span><a href="">Istanbul / Beyoglu</a></span>
+              <br />
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="box2">
+              <del>$69</del>
+              <p>$64</p>
+            </div>
+          </div>
+
+          <div class="img4">
+            <div class="hover-image">
+              <img id="slider4" src="./image/img4.jpg" alt="" />
+              <div class="Pre">
+                <i
+                  class="fa-solid fa-circle-chevron-left fa-lg"
+                  onclick="Prev4()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="Next">
+                <i
+                  class="fa-solid fa-circle-chevron-right fa-lg"
+                  onclick="Next4()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="name">26% Deal</div>
+            </div>
+            <p class="title"><a href="">PERA TULIP HOTEL</a></p>
+            <div class="box1">
+              <span><a href="">Istanbul / Beyoglu</a></span>
+              <br />
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="box2">
+              <del>$67</del>
+              <p>$55</p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between box-container">
+          <div class="img1">
+            <div class="hover-image">
+              <img id="slider5" src="./image/anh37.jpg" alt="" />
+              <div class="Pre">
+                <i
+                  class="fa-solid fa-circle-chevron-left fa-lg"
+                  onclick="Prev4()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="Next">
+                <i
+                  class="fa-solid fa-circle-chevron-right fa-lg"
+                  onclick="Next4()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="name">19% Deal</div>
+            </div>
+
+            <p class="title"><a href="">FETHIYE TOUR</a></p>
+            <div class="box1">
+              <span><a href=""> Kusadasi From</a></span>
+              <br />
+              <span><i class="fa-solid fa-calendar-days"></i> 4 days</span>
+            </div>
+            <div class="box2">
+              <del>$230</del>
+              <p>$159</p>
+            </div>
+          </div>
+          <div class="img2">
+            <div class="hover-image">
+              <img id="slider6" src="./image/anh41.jpg" alt="" />
+              <div class="Pre">
+                <i
+                  class="fa-solid fa-circle-chevron-left fa-lg"
+                  onclick="Prev5()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="Next">
+                <i
+                  class="fa-solid fa-circle-chevron-right fa-lg"
+                  onclick="Next5()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="name">30% Deal</div>
+            </div>
+            <p class="title"><a href="">CAPPADOCIA TOUR</a></p>
+            <div class="box1">
+              <span><a href=""> Istanbul From</a></span>
+              <br />
+              <span><i class="fa-solid fa-calendar-days"></i> 2 days</span>
+            </div>
+            <div class="box2">
+              <del>$235</del>
+              <p>$157</p>
+            </div>
+          </div>
+          <div class="img3">
+            <div class="hover-image">
+              <img id="slider7" src="./image/anh20.jpg" alt="" />
+              <div class="Pre">
+                <i
+                  class="fa-solid fa-circle-chevron-left fa-lg"
+                  onclick="Prev6()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="Next">
+                <i
+                  class="fa-solid fa-circle-chevron-right fa-lg"
+                  onclick="Next6()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="name">10% Deal</div>
+            </div>
+            <p class="title"><a href="">CELESTYAL OLYMPIA</a></p>
+            <div class="box1">
+              <span><a href="">Kusadasi From</a></span>
+              <br />
+              <span><i class="fa-solid fa-calendar-days"></i> 3 days</span>
+            </div>
+            <div class="box2">
+              <del>$550</del>
+              <p>$489</p>
+            </div>
+          </div>
+
+          <div class="img4">
+            <div class="hover-image">
+              <img id="slider8" src="./image/anh50.jpg" alt="" />
+              <div class="Pre">
+                <i
+                  class="fa-solid fa-circle-chevron-left fa-lg"
+                  onclick="Prev7()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="Next">
+                <i
+                  class="fa-solid fa-circle-chevron-right fa-lg"
+                  onclick="Next7()"
+                  style="color: white"
+                ></i>
+              </div>
+              <div class="name">5% Deal</div>
+            </div>
+            <p class="title"><a href="">IRAN TOUR</a></p>
+            <div class="box1">
+              <span><a href="">Kusadasi From</a></span>
+              <br />
+              <span><i class="fa-solid fa-calendar-days"></i> 4 days</span>
+            </div>
+            <div class="box2">
+              <del>$1650</del>
+              <p>$1224</p>
+            </div>
+          </div>
+        </div>
+        <h3>
+          <strong class="magintaiban">Tái khám phá bản thân ở châu Á và những nơi khác</strong>
+        </h3>
+        <div class="d-flex box-container">
+          <div class="flex-box-one box-position">
+            <img src="./1-london.jpg" alt="" />
+            <div class="wrapper-position">
+              <div class="d-flex">
+                
+              </div>
+            </div>
+          </div>
+          <div class="flex-box-two">
+            <div class="d-flex">
+              <div class="flex-box-item" style="margin-right: 5px;">
+                <div class="box-position">
+                  <img src="./2-barcelona.jpg" alt="" />
+                  <div class="wrapper-position">
+                    <div class="d-flex">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-box-item">
+                <div class="box-position">
+                  <img src="./3-berlin.jpg" alt="" />
+                  <div class="wrapper-position">
+                    <div class="d-flex">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="flex-box-item" style="margin-right: 5px;">
+                <div class="box-position">
+                  <img src="./4-bali.jpg" alt="" />
+                  <div class="wrapper-position">
+                    <div class="d-flex">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-box-item">
+                <div class="box-position">
+                  <img src="./5-osaka.jpg" alt="" />
+                  <div class="wrapper-position">
+                    <div class="d-flex">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex box-container">
+          <div class="flex-box-one">
+            <div class="d-flex">
+              <div class="box-item-flex-01">
+                <div class="box-position">
+                  <img src="./6-milan.jpg" />
+                  <div class="wrapper-position">
+                    <div class="d-flex">
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="box-position">
+                  <img src="./7-seoul.jpg" alt="" />
+                  <div class="wrapper-position">
+                    <div class="d-flex">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-item-flex-02">
+                <div class="box-position">
+                  <img src="./8-moscow.jpg" alt="" />
+                  <div class="wrapper-position">
+                    <div class="d-flex">
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="box-position">
+                  <img src="./9-pattaya.jpg" alt="" />
+
+                  <div class="wrapper-position">
+                    <div class="d-flex">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-box-two">
+            <div class="box-position" style="margin-bottom: 9x;">
+              <img src="./10-nyc.jpg" alt="" />
+
+              <div class="wrapper-position">
+                <div class="d-flex">
+                </div>
+              </div>
+            </div>
+            <div class="box-position" style="margin-top: 8px;">
+              <img src="./11-paris.jpg" alt="" />
+
+              <div class="wrapper-position">
+                <div class="d-flex">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer mt-5">
+          <div class="container">
+            <div class="row">
+              <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                  <li><a href="#">about us</a></li>
+                  <li><a href="#">our services</a></li>
+                  <li><a href="#">privacy policy</a></li>
+                  <li><a href="#">affiliate program</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">shipping</a></li>
+                  <li><a href="#">returns</a></li>
+                  <li><a href="#">order status</a></li>
+                  <li><a href="#">payment options</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                  <li><a href="#">watch</a></li>
+                  <li><a href="#">bag</a></li>
+                  <li><a href="#">shoes</a></li>
+                  <li><a href="#">dress</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100014744869330"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/nguyenkiennn_/"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="https://www.tiktok.com/en/"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const showcaseItemResp = document.querySelector(".showcase-item-resp");
+
+        showcaseItemResp.addEventListener("mouseover", function () {
+          this.style.transform = "scale(1.05)";
+        });
+
+        showcaseItemResp.addEventListener("mouseout", function () {
+          this.style.transform = "scale(1)";
+        });
+      });
+    </script>
+
+    <script>
+      var imgs = [
+        "./image/imghotel/anh20.jpg",
+        "./image/imghotel/anh37.jpg",
+        "./image/imghotel/anh41.jpg",
+        "./image/imghotel/anh50.jpg",
+      ];
+      var num = 0;
+      function Next() {
+        var slider = document.getElementById("slider");
+        num++;
+        if (num >= imgs.length) {
+          num = 0;
+        }
+        slider.src = imgs[num];
+      }
+      function Prev() {
+        var slider = document.getElementById("slider");
+        num--;
+        if (num < 0) {
+          num = imgs.length - 1;
+        }
+        slider.src = imgs[num];
+      }
+      setInterval(Next, 2000);
+
+      // 2
+
+      var imgs2 = [
+        "./image/imghotel/img1.jpg",
+        "./image/imghotel/img2.jpg",
+        "./image/imghotel/img3.jpg",
+        "./image/imghotel/img4.jpg",
+      ];
+      var num2 = 0;
+      function Next2() {
+        var slider2 = document.getElementById("slider2");
+        num2++;
+        if (num2 >= imgs2.length) {
+          num2 = 0;
+        }
+        slider2.src = imgs2[num2];
+      }
+      function Prev2() {
+        var slider2 = document.getElementById("slider2");
+        num2--;
+        if (num2 < 0) {
+          num2 = imgs2.length - 1;
+        }
+        slider2.src = imgs2[num2];
+      }
+      setInterval(Next2, 2000);
+      3;
+
+      document
+        .getElementById("dropdownInput")
+        .addEventListener("click", function () {
+          document.getElementById("dropdownMenu").classList.toggle("show");
+        });
+
+      document.addEventListener("click", function (event) {
+        if (!event.target.closest(".input-group")) {
+          document.getElementById("dropdownMenu").classList.remove("show");
+        }
+      });
+      document.getElementById("dI").addEventListener("click", function () {
+        document.getElementById("dM").classList.toggle("show");
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!event.target.closest(".input-group-1")) {
+          document.getElementById("dM").classList.remove("show");
+        }
+      });
+      document.getElementById("dI1").addEventListener("click", function () {
+        document.getElementById("dM1").classList.toggle("show");
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!event.target.closest(".input-group-2")) {
+          document.getElementById("dM1").classList.remove("show");
+        }
+      });
+      const imageSources = [
+        "./image/anh2.webp",
+        "./image/anh21.webp",
+        "./image/anh22.webp",
+        "./image/anh23.webp",
+      ];
+      let currentIndex = 0;
+      const trustedByElement = document.getElementById("trustedBy");
+      const imageElement = document.getElementById("trustedImage");
+
+      function updateContent() {
+        trustedByElement.innerHTML = "Trusted by ";
+        imageElement.src = imageSources[currentIndex];
+        currentIndex = (currentIndex + 1) % imageSources.length;
+      }
+      updateContent();
+      setInterval(updateContent, 3000);
+    </script>
+    <script>
+      //khai báo vùng
+      let myApp = angular.module("appDemo", ["ngRoute"]);
+      //ngRoute: cung cấp các chức năng định tuyến hỗ trợ
+      //khi thực hiện chuyển trang
+      myApp.config(function ($routeProvider) {
+        $routeProvider
+          .when("/list-user", {
+            templateUrl: "views/listuser.html",
+            controller: ListUserController,
+          })
+          .when("/list/detail-user/:id", {
+            templateUrl: "views/detailuser.html",
+            controller: DetailUserController,
+          })
+          .when("/list/edit-user/:id", {
+            templateUrl: "views/edituser.html",
+            controller: EditUserController,
+          })
+          .when("/add-user", {
+            templateUrl: "views/adduser.html",
+            controller: AddUserController,
+          })
+          .otherwise({
+            redirectTo: "/list-user",
+          });
+      });
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

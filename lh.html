@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./lh.css" />
+    <link rel="stylesheet" href="./datve.html">
+    <script src="/angular/libs/angular.min.js"></script>
+    <script src="/angular/as.js"></script>
+    <script src="./lh.js"></script>
+  </head>
+  <body ng-app="demo">
+    <header>
+      <div ng-controller ="control" id="imglh">
+        <nav class="navbar navbar-light">
+          <div class="container-fluid">
+            <img src="./image/traveloka.svg" class="traveloka mx-5 my-3" alt="" />
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="container-fluid">
+                <div
+                  class="textcolor collapse navbar-collapse fs-5"
+                  id="navbarNavDropdown"
+                >
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <strong
+                          ><img src="./image/vietnam.svg" alt="" /> VI |
+                          VND</strong
+                        >
+                      </a>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a class="dropdown-item text-black" href="#">WON</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-black" href="#">USD</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-black" href="#"
+                            >DOLLAR</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"
+                        ><strong>Khuyến mãi</strong></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./lh.html"
+                        ><strong>Liên hệ</strong></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"
+                        ><strong>Hợp tác với chúng tôi</strong>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./datve.html"><strong>Đặt lịch</strong></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"
+                        ><strong>Đặt chỗ cho tôi</strong></a
+                      >
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <strong>Nguyễn Khắc Kiên</strong>
+                      </a>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="navbarDropdownMenuLink"
+                      >
+                        <li>
+                          <a class="dropdown-item text-black" href="#"
+                            ><strong>Nguyễn</strong></a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item text-black" href="#"
+                            ><img
+                              class="mx-2"
+                              src="./image/coin.svg"
+                              alt="" /><strong>0 Điểm</strong
+                            ><i class="fa-solid fa-chevron-right mx-1"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item text-black fw-medium my-2"
+                            href="#"
+                            ><i
+                              class="fa-solid fa-circle-user fa-lg mx-2"
+                              style="color: #0194f3"
+                            ></i
+                            >Chỉnh sửa hồ sơ</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item text-black fw-medium my-2"
+                            href="#"
+                            ><i
+                              class="fa-solid fa-id-card fa-lg mx-2"
+                              style="color: #0194f3"
+                            ></i
+                            >Thẻ của tôi</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item text-black fw-medium my-2"
+                            href="#"
+                            ><i
+                              class="fa-solid fa-money-bill fa-lg mx-2"
+                              style="color: #0194f3"
+                            ></i
+                            >Danh sách giao dịch</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item text-black fw-medium my-2"
+                            href="#"
+                            ><i
+                              class="fa-solid fa-receipt fa-lg mx-2"
+                              style="color: #0194f3"
+                            ></i
+                            >Đặt chỗ của tôi</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item text-black fw-medium my-2"
+                            href="#"
+                            ><i
+                              class="fa-solid fa-bell fa-lg mx-2"
+                              style="color: #0194f3"
+                            ></i
+                            >Thông báo giá vé máy bay</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item text-black fw-medium my-2"
+                            href="#"
+                            ><i
+                              class="fa-solid fa-users-gear fa-lg mx-2"
+                              style="color: #0194f3"
+                            ></i
+                            >Passenger Quick Pick</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item text-black fw-medium my-2"
+                            href="#"
+                            ><i
+                              class="fa-solid fa-cube fa-lg mx-2"
+                              style="color: #0194f3"
+                            ></i
+                            >Khuyến mãi</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item text-black fw-medium my-2"
+                            href="#"
+                            ><i
+                              class="fa-solid fa-power-off fa-lg mx-2"
+                              style="color: #0194f3"
+                            ></i
+                            >Đăng xuất</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </nav>
+        <div class="main">
+          <form action="" method="POST" class="form" id="form-1">
+            <h3>{{ myText }}</h3>
+            <p class="desc mb-0">Hãy liên hệ với chúng tôi những khó khăn <b>Traveloka</b> </p>
+            <p class="desc mt-0">luôn sẵn sàng giúp đỡ bạn</p>
+            <div class="form-group">
+              <label for="text" class="form-label">Họ tên</label>
+              <input
+                id="password"
+                name="password"
+                type="text"
+                placeholder="Nhập họ và tên"
+                class="form-control"
+              />
+              <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="text"
+                placeholder="VD: kien@gmail.com"
+                class="form-control"
+              />
+              <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="sodienthoai" class="form-label">Số điện thoại</label>
+              <input
+                id="sodienthoai"
+                name="sodienthoai"
+                type="number"
+                placeholder="VD:0393524703"
+                class="form-control"
+              />
+              <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="password_confirmation" class="form-label"
+                >Ghi chú</label
+              >
+              <input
+                id="password_confirmation"
+                name="password_confirmation"
+                placeholder="Nhập thông tin bạn cần hỗ trợ"
+                type="text"
+                class="form-control"
+              />
+              <span class="form-message"></span>
+            </div>
+
+            <button class="form-submit" onclick="onLich()">Gửi thông tin</button>
+          </form>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            Validator({
+              form: "#form-1",
+              formGroupSelector: ".form-group",
+              errorSelector: ".form-message",
+              rules: [
+                Validator.isEmail("#email"),
+                Validator.isRequired(
+                  "#sodienthoai",
+                  "Vui lòng nhập số điện thoại của bạn"
+                ),
+                Validator.minLength("#sodienthoai", 10),
+                Validator.minLength("#password", 6),
+                Validator.isRequired("#password_confirmation"),
+                Validator.isConfirmed("#password_confirmation"),
+              ],
+            });
+          });
+          function onLich() {
+            alert("Gửi thành công");
+          }
+        </script>
+        <hr style="width: 80%; height: 5px; background: rgb(255, 255, 255)" />
+        <div class="tieude-cuoi text-center mt-5 text-white">
+          <h1>Don't let our campaigns escape!</h1>
+          <p>
+            Don't decide without having to look at our easy booking campaigns
+            that we have updated for you. With your early bookings you can plan
+            your holiday at very affordable rates and your
+          </p>
+          <p>time and money will be in your pocket!</p>
+        </div>
+        <div class="cuoicung text-center text-white">
+          <p>
+            <b><i>You can be informed of all our opportunities!</i></b>
+          </p>
+        </div>
+
+        <footer class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                  <li><a href="#">about us</a></li>
+                  <li><a href="#">our services</a></li>
+                  <li><a href="#">privacy policy</a></li>
+                  <li><a href="#">affiliate program</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">shipping</a></li>
+                  <li><a href="#">returns</a></li>
+                  <li><a href="#">order status</a></li>
+                  <li><a href="#">payment options</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                  <li><a href="#">watch</a></li>
+                  <li><a href="#">bag</a></li>
+                  <li><a href="#">shoes</a></li>
+                  <li><a href="#">dress</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                  <a href="https://www.facebook.com/profile.php?id=100014744869330"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/nguyenkiennn_/"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.tiktok.com/en/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <script src="https://uhchat.net/code.php?f=b143ed"></script>
+
+      </div>
+    </header>
+    <script src="/angular/libs/angular.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"
+></script>
+<!-- Các script khác -->
+
+  </body>
+</html>

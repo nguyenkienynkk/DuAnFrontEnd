@@ -1,0 +1,1009 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+img {
+  float: left;
+  margin-right: 10px;
+}
+ul {
+  margin-left: 10px;
+}
+.background-image {
+  background-image: url("./image/banner.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.content {
+  z-index: 3;
+}
+.textcolor ul li a {
+  color: white;
+}
+.nav2 ul li{
+font-size: 14px;
+}
+.background-image p{
+  margin-top: 20px;
+  font-size:33px;
+  color: white;
+}
+.phan4{ 
+text-align: center;
+justify-content: center;
+display: flex;
+}
+.nav-item{
+  margin: auto;
+}
+.custom-home {
+  color: #cdd0d1; 
+  border: 1px solid transparent;
+  transition: 0.3s linear all;
+}
+
+.custom-home:hover {
+  border: 1px solid #ffffff; 
+  color:#fff;
+  
+}
+
+.custom-home.active {
+  color: #000; 
+}
+
+.phan5{
+  font-size: 14px;
+  font-weight: 650;
+  margin-left: 183px;
+}
+.phan51,.phan52{
+  font-size: 14px;
+  font-weight: 650;
+}
+.vung span{
+  border: solid #397fe0 2px;
+  color: #397fe0;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 16px;
+}
+.dropdown-menu li .dropdown-item span{
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#trustedByContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 42%;
+  margin-top: 40px;
+}
+#imageContainer {
+  margin-right: 10px;
+}
+
+#imageContainer:hover {
+background-color: white;
+border-radius: 2px;
+padding: 2px;
+}
+#trustedBy {
+  font-weight: bold;
+}
+
+.input-no-border-radius{
+  border-radius: 0px !important;
+}
+
+.w-image{
+  width: 80%;
+  object-fit: cover;
+}
+
+.top-45{
+  top: 45px;  
+}
+.magiamgia {
+width: 81%;
+}
+.thetong4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Để tránh margin-right được áp dụng cho ảnh cuối cùng */
+.magiamgia img{
+  margin-top: 30px;
+width: 292px;
+height: 292px;
+border-radius: 5px;
+}
+#pillNav3{
+  width: 350px;
+}
+
+.special-offers {
+  margin: 2rem 0;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.special-offers h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.hotel-offer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-image {
+  width: 150px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.hotel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hotel-offer:hover .hotel-image img {
+  transform: scale(1.1);
+}
+
+.hotel-details {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.hotel-details h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.hotel-details p {
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.hotel-details span {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+.tieude{
+  text-align: center;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(0, 0, 0, 0.603);
+}
+
+.four-sales{
+  margin-bottom: 100px;
+  margin-top: 40px;
+  display: flex;
+  text-align: center;
+}
+.four-sales>.img1{
+  margin-left: 150px;
+  margin-right: 20px;
+}
+.four-sales>.img2{
+  margin-right: 20px;
+}
+.four-sales>.img3{
+  margin-right: 20px;
+}
+.four-sales>.img4{
+  margin-right: 20px;
+}
+.img4>.box1>span i{
+color: #747474;
+}
+.img3>.box1>span i{
+  color: #747474;
+  }
+.img2>.box1>span i{
+   color: #747474;
+      }
+.img1>.box1>span i{
+          color: #747474;
+          }
+.img1>.box1>span{
+  color: #747474;
+  font-size: 15px;
+
+}
+.img2>.box1>span{
+  color: #747474;
+  font-size: 15px;
+
+}
+.img3>.box1>span{
+  color: #747474;
+  font-size: 15px;
+
+}
+.img4>.box1>span{
+  color: #747474;
+  font-size: 15px;
+}
+.box1{
+  width: 65%;
+  height: 50px;
+
+  float: left;
+}
+.box1>i{
+  color: red;
+}
+.box2>del{
+color: red;
+font-size: 17px;
+
+
+}
+.box-container{
+  width: 80%;
+  margin: 10px auto;
+  justify-content: space-around;
+}
+
+.d-flex{
+  display: flex;
+  align-items: center;
+}
+
+.box-position{
+  position: relative;
+  box-sizing: border-box;
+}
+
+.box-position img{
+  width: 100%;
+}
+
+.wrapper-position{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.403);
+  bottom: 20px;
+  left: 20px;
+}
+
+.flex-box-one{
+  flex: 1;
+  margin-right: 5px;
+  justify-content: space-between;
+}
+
+.justify-content-between{
+  justify-content: space-between;
+}
+
+.flex-box-two{
+  flex: 1;
+  margin-left: 5px;
+}
+
+
+
+.wrapper-position span{
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.box-item-flex-01{
+  padding-right: 5px;
+}
+
+
+.flex-box-one{
+  flex: 1;
+}
+
+.box-item-flex-01{
+  flex: 1;
+}
+
+.box-item-flex-02{
+  flex: 1;
+}
+.form-datve>h2{
+  margin-top: 20px;
+  margin-left: 750px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.form-datve>.personal-details{
+  margin-bottom: 10px;
+}
+.form-datve>.personal-details>span{
+ color: #b5b4b8;
+  margin-left: 750px;
+}
+/* form validation */
+.form-datve > .form-trong{
+ 
+  justify-content: center;
+  display: flex;
+  gap: 50px;
+}
+.form-datve > .form-trong>.full-name p{
+ 
+  color: #fff;
+margin-bottom: 7px;
+}
+.form-datve > .form-trong>.full-name{
+text-align: center;
+}
+.form-datve > .form-trong >.full-name >input{
+border-radius: 10px;
+border: none;
+/* box-shadow: 1px 1px  20px red; */
+
+ padding: 15px;
+ width: 150px;
+}
+.form-datve > .form-trong>.full-name p{
+ color: rgb(247, 245, 245);
+}
+.formass2{
+  color: white;
+  font-size: 15px;
+  font-family:Arial, Helvetica, sans-serif ;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 30px rgb(0, 255, 106);
+margin-left:760px ;
+margin-top: 30px;
+padding: 10px;
+width: 100px;
+}
+.formass2 a:hover{
+  color: aqua;
+  
+
+}
+.formass2:hover{
+  background-color: #20232A;
+}  
+.footer1{
+  margin-top: 20px;
+  height: 50px;
+  text-align: center;
+  padding-top: 25px;
+  background-color: black;
+}
+.footer1>p{
+  color: white;
+}
+
+.hover-image{
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 0.25s linear;
+  width: 280px;
+  height: 230px;
+  position: relative;
+  display: block;
+}
+
+.hover-image img{
+  overflow: hidden;
+  transition: all 0.25s linear;
+ width: 100%;
+ height: 100%;
+}
+
+.hover-image img:hover{
+  transform: scale(1.2);
+  opacity: 0.7;
+ 
+}
+.img1 .hover-image .name{
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 15px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+ background-color: red;
+ width: 100px;
+ height: 23px;
+ padding-top: 4px;
+ text-align: center;
+ cursor: pointer;
+}
+.img1 .hover-image:hover .name{
+  bottom: 40%;
+  opacity: 1;
+ 
+}
+.img2 .hover-image .name{
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 15px;
+  bottom: 0px;
+  left: 50%;
+
+  transform: translateX(-50%);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+ background-color: red;
+ width: 100px;
+ height: 23px;
+ padding-top: 4px;
+ text-align: center;
+ cursor: pointer;
+}
+.img2 .hover-image:hover .name{
+  bottom: 40%;
+  opacity: 1;
+}
+.img3 .hover-image .name{
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 15px;
+  bottom: 0px;
+
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+ background-color: red;
+ width: 100px;
+ height: 23px;
+ padding-top: 4px;
+ text-align: center;
+ cursor: pointer;
+}
+.img3 .hover-image:hover .name{
+  bottom: 40%;
+  opacity: 1;
+}
+.img4 .hover-image .name{
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 15px;
+
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+ background-color: red;
+ width: 100px;
+ height: 23px;
+ padding-top: 4px;
+ text-align: center;
+ cursor: pointer;
+}
+.img4 .hover-image:hover .name{
+  bottom: 40%;
+  opacity: 1;
+}
+.img1 .hover-image .Pre{
+  position: absolute;
+  left: 10px;
+  transform: translateY(-50%);
+ bottom: 39%;
+
+}
+.img1 .hover-image .Next{
+  position: absolute;
+  right: 0;
+  transform: translateX(-50%);
+  bottom: 43%;
+}
+.img2 .hover-image .Pre{
+  position: absolute;
+  left: 10px;
+  transform: translateY(-50%);
+ bottom: 39%;
+
+}
+.img2 .hover-image .Next{
+  position: absolute;
+  right: 0;
+  transform: translateX(-50%);
+  bottom: 43%;
+}
+.img3 .hover-image .Pre{
+  position: absolute;
+  left: 10px;
+  transform: translateY(-50%);
+ bottom: 39%;
+
+}
+.img3 .hover-image .Next{
+  position: absolute;
+  right: 0;
+  transform: translateX(-50%);
+  bottom: 43%;
+}
+.img4 .hover-image .Pre{
+  position: absolute;
+  left: 10px;
+  transform: translateY(-50%);
+ bottom: 39%;
+
+}
+.img4 .hover-image .Next{
+  position: absolute;
+  right: 0;
+  transform: translateX(-50%);
+  bottom: 43%;
+}
+
+/* Pre-next */
+/* 1 */
+.img1 .hover-image .Pre{
+  position: absolute;
+  letter-spacing: 2px;
+  bottom: 0px;
+  left: 17px;
+  transform: translateX(-50%);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+ padding-top: 4px;
+ text-align: center;
+ cursor: pointer;
+}
+.img1 .hover-image:hover .Pre{
+  opacity: 1;
+  bottom: 40%;
+}
+.img1 .hover-image .Next{
+  position: absolute;
+  letter-spacing: 2px;
+  bottom: 0px;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+ padding-top: 4px;
+ text-align: center;
+ cursor: pointer;
+}
+.img1 .hover-image:hover .Next{
+  opacity: 1;
+  bottom: 37%;
+}
+/* end 1 */
+/* 2 */
+.img2 .hover-image .Pre{
+  position: absolute;
+  letter-spacing: 2px;
+  bottom: 0px;
+  left: 17px;
+
+  transform: translateX(-50%);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+ padding-top: 4px;
+ text-align: center;
+ cursor: pointer;
+}
+.img2 .hover-image:hover .Pre{
+  opacity: 1;
+  bottom: 40%;
+}
+.img2 .hover-image .Next{
+  position: absolute;
+  letter-spacing: 2px;
+  bottom: 0px;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+ padding-top: 4px;
+ text-align: center;
+ cursor: pointer;
+}
+.img2 .hover-image:hover .Next{
+  opacity: 1;
+  bottom: 37%;
+}
+/* end 2 */
+/* 3 */
+.img3 .hover-image .Pre{
+  position: absolute;
+  letter-spacing: 2px;
+  bottom: 0px;
+  left: 17px;
+  transform: translateX(-50%);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+ padding-top: 4px;
+ text-align: center;
+ cursor: pointer;
+}
+.img3 .hover-image:hover .Pre{
+  opacity: 1;
+  bottom: 40%;
+}
+.img3 .hover-image .Next{
+  position: absolute;
+  letter-spacing: 2px;
+  bottom: 0px;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+ padding-top: 4px;
+ text-align: center;
+ cursor: pointer;
+}
+.img3 .hover-image:hover .Next{
+  opacity: 1;
+  bottom: 37%;
+}
+/* end3 */
+.img4 .hover-image .Pre{
+  position: absolute;
+  letter-spacing: 2px;
+  bottom: 0px;
+  left: 17px;
+  transform: translateX(-50%);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+ padding-top: 4px;
+ text-align: center;
+ cursor: pointer;
+}
+.img4 .hover-image:hover .Pre{
+  opacity: 1;
+  bottom: 40%;
+}
+.img4 .hover-image .Next{
+  position: absolute;
+  letter-spacing: 2px;
+  bottom: 0px;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+ padding-top: 4px;
+ text-align: center;
+ cursor: pointer;
+}
+.img4 .hover-image:hover .Next{
+  opacity: 1;
+  bottom: 37%;
+}
+span>a{
+  font-size: 15px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+p>a{
+  font-size: 15px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+.title{
+  margin-top: 10px;
+}
+.mbay{
+  margin-left: 8.33333333%;
+}
+/* footer */
+.form-control:hover {
+  border-color: #365dab;
+}
+
+.form-group.invalid .form-control {
+  border-color: #f33a58;
+}
+
+.form-group.invalid .form-message {
+  color: #f33a58;
+}
+
+.form-message {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding: 4px 0 0;
+}
+
+.form-submit {
+  outline: none;
+  background-color: #3b3a8e;
+  margin-top: 12px;
+  padding: 12px 16px;
+  font-weight: 600;
+ 
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  background-color: #1ac7b6;
+}
+
+.spacer {
+  margin-top: 36px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+line-height: 1.5;
+font-family: 'Poppins', sans-serif;
+}
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+.container{
+max-width: 1170px;
+margin:auto;
+}
+.row{
+display: flex;
+flex-wrap: wrap;
+}
+ul{
+list-style: none;
+}
+.footer{
+background-color: #24262b;
+  padding: 70px 0;
+}
+.footer-col{
+ width: 25%;
+ padding: 0 15px;
+}
+.footer-col h4{
+font-size: 18px;
+color: #ffffff;
+text-transform: capitalize;
+margin-bottom: 35px;
+font-weight: 500;
+position: relative;
+}
+.footer-col h4::before{
+content: '';
+position: absolute;
+left:0;
+bottom: -10px;
+background-color: #e91e63;
+height: 2px;
+box-sizing: border-box;
+width: 50px;
+}
+.footer-col ul li:not(:last-child){
+margin-bottom: 10px;
+}
+.footer-col ul li a{
+font-size: 16px;
+text-transform: capitalize;
+color: #ffffff;
+text-decoration: none;
+font-weight: 300;
+color: #bbbbbb;
+display: block;
+transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+color: #ffffff;
+padding-left: 8px;
+}
+.footer-col .social-links a{
+display: inline-block;
+height: 40px;
+width: 40px;
+background-color: rgba(255,255,255,0.2);
+margin:0 10px 10px 0;
+text-align: center;
+line-height: 40px;
+border-radius: 50%;
+color: #ffffff;
+transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+color: #24262b;
+background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+.footer-col{
+  width: 50%;
+  margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+.footer-col{
+  width: 100%;
+}
+}
+.tieude-cuoi{
+  font-size: 12px;
+}
+.cuoicung{
+height: 60px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.magintaiban{
+  margin-left: 150px;
+}
+.flex-box-one{
+  flex: 1;
+  margin-right: 5px;
+  justify-content: space-between;
+}
+.box-position img{
+  width: 100%;
+}
+.flex-box-two{
+  flex: 1;
+  margin-left: 5px;
+}
+.flex-box-item{
+  flex: 1;
+}
+.wrapper-position{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.403);
+  bottom: 20px;
+  left: 20px;
+}
+.box-position{
+  position: relative;
+  box-sizing: border-box;
+}
+.box-container{
+  width: 80%;
+  margin: 10px auto;
+  justify-content: space-around;
+}
+.four-icon>.Easy{
+
+  width: 245px;
+  height: 150px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+.four-icon>.Easy>i{
+  color: rgb(8, 186, 186);
+}
+.four-icon>.Easy>i:hover{
+  color: rgb(7, 132, 132);
+}
+.Easy>a:hover{
+  color: rgb(200, 10, 10);
+}
+.Easy>h3,p{
+color: rgba(0, 0, 0, 0.603);
+}
+.Easy>h3:hover{
+  color: blue;
+}
+.Easy>p:hover{
+color: blue;
+}
+.Easy>i{
+  width: 50px;
+  height: 50px;
+}
+.Last>h3:hover{
+  color: blue;
+}
+.Last>h3,p{
+  color: rgba(0, 0, 0, 0.603);
+  }
+  .Last>h3:hover{
+    color: blue;
+}
+.Last>p:hover{
+color: blue;
+}
+.four-icon>.Last{
+  width: 245px;
+  height: 150px;
+  margin-right: 50px;
+}
+.four-icon>.Last>i{
+  color: rgb(91, 183, 91);
+}
+.four-icon>.Last>i:hover{
+  color: rgb(70, 142, 70);
+  
+}
+.Ba>h3:hover{
+  color: blue;
+}
+.Ba>h3,p{
+  color: rgba(0, 0, 0, 0.603);
+  }
+  .Ba>h3:hover{
+    color: blue;
+}
+.Ba>p:hover{
+color: blue;
+}
+.four-icon>.Ba{
+  width: 245px;
+  height: 150px;
+  margin-right: 50px;
+
+}
+.four-icon>.Ba>i{
+  color: rgb(182, 182, 47);
+}
+.four-icon>.Ba>i:hover{
+  color: rgb(150, 150, 39);
+}
+.Early>h3,p{
+  color: rgba(0, 0, 0, 0.603);
+  }
+.Early>h3:hover{
+color: blue;
+}
+.Early>h3:hover{
+  color: blue;
+}
+.Early>p:hover{
+color: blue;
+}
+.four-icon>.Early{
+  width: 245px;
+  height: 150px;
+  margin-right: 50px;
+}
+.four-icon>.Early>i{
+  color: rgb(186, 61, 186);
+}
+.four-icon>.Early>i:hover{
+  color: rgb(154, 51, 154);
+}
+.box-demo{
+text-align: center;
+}
